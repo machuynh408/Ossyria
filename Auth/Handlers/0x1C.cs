@@ -1,0 +1,4 @@
+using OssyriaDEV;
+
+namespace Auth
+{

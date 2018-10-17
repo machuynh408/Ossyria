@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0822AC0-25CC-4909-B3F1-F7A4F27C9494}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OssyriaDEV</RootNamespace>
+    <AssemblyName>OssyriaDEV</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MapleLib">
+      <HintPath>..\..\MapleLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="ActionDelay.cs" />
+    <Compile Include="Environment\Map.cs" />
+    <Compile Include="Environment\Platform.cs" />
+    <Compile Include="Environment\RespawnManager.cs" />
+    <Compile Include="Interprocess\Interprocess.cs" />
+    <Compile Include="Interprocess\Relative.cs" />
+    <Compile Include="Monster\DamageManager.cs" />
+    <Compile Include="Monster\MobSkillManager.cs" />
+    <Compile Include="Monster\Monster.cs" />
+    <Compile Include="Environment\Movement.cs" />
+    <Compile Include="Environment\Npc.cs" />
+    <Compile Include="Environment\Spawn.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Functions\Attack.cs" />
+    <Compile Include="Modules\Quest.cs" />
+    <Compile Include="Monster\StatusManager.cs" />
+    <Compile Include="Player\CashInventoryManager.cs" />
+    <Compile Include="Player\EquipmentManager.cs" />
+    <Compile Include="Player\InventoryManager.cs" />
+    <Compile Include="Player\KeyboardManager.cs" />
+    <Compile Include="Player\QuestsManager.cs" />
+    <Compile Include="Player\StatsManager.cs" />
+    <Compile Include="Player\SkillsManager.cs" />
+    <Compile Include="Player\DiseasesManager.cs" />
+    <Compile Include="Skills\Buff.cs" />
+    <Compile Include="Functions\Disease.cs" />
+    <Compile Include="Functions\Exp.cs" />
+    <Compile Include="Functions\Loot.cs" />
+    <Compile Include="Functions\Mist.cs" />
+    <Compile Include="Skills\Cooldown.cs" />
+    <Compile Include="Functions\Mount.cs" />
+    <Compile Include="Skills\Passive.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Functions\Status.cs" />
+    <Compile Include="Functions\Summon.cs" />
+    <Compile Include="Functions\Update.cs" />
+    <Compile Include="Net\IConnection.cs" />
+    <Compile Include="Info.cs" />
+    <Compile Include="Modules\Equipment.cs" />
+    <Compile Include="Modules\Inventory.cs" />
+    <Compile Include="Modules\Item.cs" />
+    <Compile Include="Modules\Key.cs" />
+    <Compile Include="Modules\MobSkill.cs" />
+    <Compile Include="Modules\Skill.cs" />
+    <Compile Include="Net\Encryption.cs" />
+    <Compile Include="Net\Packets.cs" />
+    <Compile Include="Net\Reader.cs" />
+    <Compile Include="Net\Writer.cs" />
+    <Compile Include="Systems\Guild.cs" />
+    <Compile Include="World\State.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Script.cs" />
+    <Compile Include="Scripts\Shop.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Systems\Party.cs" />
+    <Compile Include="Systems\Trade.cs" />
+    <Compile Include="Timestamp.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="World\Transition.cs" />
+    <Compile Include="Wz\AnchorWz.cs" />
+    <Compile Include="Wz\CharacterWz.cs" />
+    <Compile Include="Wz\CommodityWz.cs" />
+    <Compile Include="Wz\FootholdWz.cs" />
+    <Compile Include="Wz\ItemWz.cs" />
+    <Compile Include="Wz\Library.cs" />
+    <Compile Include="Wz\LootWz.cs" />
+    <Compile Include="Wz\MapWz.cs" />
+    <Compile Include="Wz\MobSkillWz.cs" />
+    <Compile Include="Wz\MobWz.cs" />
+    <Compile Include="Wz\NpcWz.cs" />
+    <Compile Include="Wz\PortalWz.cs" />
+    <Compile Include="Wz\QuestWz.cs" />
+    <Compile Include="Wz\SkillWz.cs" />
+    <Compile Include="Wz\StringWz.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
